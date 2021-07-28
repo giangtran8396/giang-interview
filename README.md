@@ -33,6 +33,13 @@
 ### Closures
 - Closure là một chức năng có quyền truy cập vào phạm vi cha, ngay cả sau khi scope đã đóng.
 
+> function speak() {
+  var words = 'hi';
+  return function logIt() {
+    console.log(words);
+  }
+}
+
 [Read more](https://anonystick.com/blog-developer/discuss-about-closures-in-javascript-2019051695927961.jsx)
 
 ### Currying
