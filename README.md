@@ -44,6 +44,20 @@
 [Read more](https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206)
 
 ## 📘 Docker
+- Dockerfile build image -> run conatiner from image
+
+1. Dockerfile
+2. Docker-compose
+3. Docker build
+4. images
 
 ## 📘 Nginx
+1. Can hanlde 10000 request at the same time
+2. Static file
+3. Proxy
+4. Rewrite url
+5. limit connection
+6. support websocket
+7. support flv and mp4
 
+[Read more](https://wiki.matbao.net/nginx-la-gi-huong-dan-kiem-tra-va-cai-dat-nginx-server/)
