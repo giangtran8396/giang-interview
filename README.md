@@ -7,6 +7,9 @@
     - [1. Closures](#closures)
     - [2. Currying](#currying)
     - [3. Hoisting](#hoisting)
+    - [4. Destructuring](#destructuring)
+    - [5. Rest Parameters](#rest-parameters)
+    - [6. Spread](#spread)
 - [Docker](#-Docker)
 - [Nginx](#-nginx)
 
@@ -132,6 +135,87 @@ var salary = "1000$";
 
 
 [Read more](https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206)
+
+### Destructuring
+
+> Allow set variables of Object or Array reduce line of code
+
+- Destructuring Objects
+  ```
+  const person = {
+    name: 'giang',
+    age: 25
+  }
+
+  //original methods
+  const name = person.name
+  const age = person.age
+
+  //destructuring
+  const { name, age } = giang
+  ```
+- Destructuring Array
+  ```
+  const date = ['1996', '03', '08']
+  
+  //original methods
+  const year = date[0]
+  const month = date[1]
+  const day = date[2]
+
+  //destructuring
+  const [year, month, day] = date
+  ```
+### Rest Parameters
+
+> using when unspecifed parametr
+
+- Rest
+  ```
+  function restTest(...args) {
+    console.log(args)
+  }
+  restTest(1, 2, 3, 4, 5, 6);// [1, 2, 3, 4, 5, 6]
+  ```
+
+### Spread
+
+> Can copy object, update object, merged array ...
+
+- Copy object
+  ```
+  const person = {
+    name: 'giang',
+    age: 25
+  }
+
+  const p = person;
+  p.name = 'test'
+
+  console.log(person.name) //output: test
+  console.log(b.name) //output: test
+  ```
+
+  ```
+  const person = {
+    name: 'giang',
+    age: 25
+  }
+
+  const p = {...person};
+  p.name = 'test'
+
+  console.log(person.name) //output: giang
+  console.log(b.name) //output: test
+  ```
+- Merged array
+  ```
+  const arr = [🤷‍♂️,👀,🐱‍🚀]
+  const arr1 = [🐱‍🏍,🐱‍👤]
+
+  const mergedArray = [...arr,...arr1]
+  //mergedArray: [🤷‍♂️,👀,🐱‍🚀,🐱‍🏍,🐱‍👤] 
+  ```  
 
 ## 📘 Docker
 - Dockerfile build image -> run conatiner from image
