@@ -7,6 +7,8 @@
     - [1. Closures](#closures)
     - [2. Currying](#currying)
     - [3. Hoisting](#hoisting)
+- [Docker](#-Docker)
+- [Nginx](#-nginx)
 
 ## 📘 REST API
 ### 6 architectural constraints
@@ -41,5 +43,7 @@
 
 [Read more](https://anonystick.com/blog-developer/hoisting-javascript-la-gi-hoisting-tot-hay-xau-chi-can-1-phut-de-hieu-2020051681168206)
 
+## 📘 Docker
 
+## 📘 Nginx
 
