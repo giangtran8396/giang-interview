@@ -2,7 +2,8 @@
 
 - [REST API](#-rest-api)
     - [1. 6 architectural constraints](#6-architectural-constraints)
-    - [2. resource naming](#-resource-naming)
+    - [2. resource naming](#resource-naming)
+    - [3. N + 1 Problem](#n+1-problem)
 - [JAVASCRIPT](#-javascript)
     - [1. Closures](#closures)
     - [2. Currying](#currying)
@@ -19,6 +20,23 @@
 2. Client–server
 3. Stateless
 4. Cacheable
+    - Expires
+      ```
+      Expires: Thu, 03 Dec 2020 23:02:37 GMT
+      ```
+    - Cache-Control
+      ```
+      Cache-Control: max-age=3600
+      ```
+    - Last-Modified
+      ```
+      Last-Modified: Mon, 07 Dec 2020 16:21:06 GMT
+      ```
+    - ETag
+      ```
+      ETag: "abcd1234567n34jv"
+      ```
+      [Read more](https://itplusx.info/restful-api-phan3-caching/)
 5. Layered system
 6. Code on demand (optional)
 
@@ -31,6 +49,12 @@
 4. controller
 
 [Read more](https://restfulapi.net/resource-naming/)
+
+### N+1 Problem
+
+>The idea is that insufficient information in collection resources may lead to the N+1 problem in REST APIs
+
+> when you fetch parent and fectch N children
 
 ## 📘 Javascript
 ### Closures
