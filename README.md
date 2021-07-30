@@ -4,6 +4,7 @@
     - [1. 6 architectural constraints](#6-architectural-constraints)
     - [2. resource naming](#resource-naming)
     - [3. N + 1 Problem](#n+1-problem)
+    - [4 .HTTP Accept](#http-accept)
 - [JAVASCRIPT](#-javascript)
     - [1. Closures](#closures)
     - [2. Currying](#currying)
@@ -56,6 +57,22 @@
 
 > when you fetch parent and fectch N children
 
+### HTTP Accept
+
+```
+Accept : text/html,application/xml
+```
+- `q` parameter
+
+```
+Accept : text/html, application/xml;q=0.9, */*;q=0.8
+```
+- > client is indicating the server that it will prefer to have the response in `text/html` format, first, and then `application/xml` and then `*/*`
+
+- >  if both `application/xml` and `*/*` had a preference of 0.9 then application/xml will be served by the server.
+
+- Erorr code
+  - 406 (not acceptable)
 ## 📘 Javascript
 ### Closures
 > Closure là một chức năng có quyền truy cập vào phạm vi cha, ngay cả sau khi scope đã đóng.
