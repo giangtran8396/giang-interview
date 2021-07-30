@@ -93,9 +93,9 @@ DELETE | Delete | 405 (Method not allowed), 405 (Method not allowed), unless you
 - 4xx: Client Error – This category of error status codes points the finger at clients.
 - 5xx: Server Error – The server takes responsibility for these error status codes.
 
-> 406 is returned by the server when it can't respond based on accepting the request headers (ie they have an Accept header which states they only want XML).
+> 406 is returned by the server when it can't `respond` based on accepting the request headers (ie they have an Accept header which states they only want XML).
 
-> 415 is returned by the server when the entity sent in a request (content in a POST or PUT) has an unsupported mediatype (i.e. they sent XML).
+> 415 is returned by the server when the entity sent in a `request` (content in a POST or PUT) has an unsupported mediatype (i.e. they sent XML).
 
 > 406 when you can't send what they want, 415 when they send what you don't want.
 
