@@ -4,7 +4,9 @@
     - [1. 6 architectural constraints](#6-architectural-constraints)
     - [2. resource naming](#resource-naming)
     - [3. N + 1 Problem](#n+1-problem)
-    - [4 .HTTP Accept](#http-accept)
+    - [4. HTTP Accept](#http-accept)
+    - [5. HTTP Methods](#http-methods)
+    - [6. HTTP Status Code](#http-status-code)
 - [JAVASCRIPT](#-javascript)
     - [1. Closures](#closures)
     - [2. Currying](#currying)
@@ -73,6 +75,30 @@ Accept : text/html, application/xml;q=0.9, */*;q=0.8
 
 - Erorr code
   - 406 (not acceptable)
+
+### HTTP Methods
+
+HTTP METHOD | CRUD | ENTIRE COLLECTION (E.G. /USERS) | SPECIFIC ITEM (E.G. /USERS/123)
+--- | --- | --- | --- | 
+POST | Create | 201 (Created), ‘Location’ header with link to /users/{id} containing new ID. | Avoid using POST on single resource <br /> 201 (Created) <br /> 200 (OK) <br /> 204 (No Content)
+GET | Read | 200 (OK), list of users. Use pagination, sorting and filtering to navigate big lists. | 200 (OK) <br /> single user. <br /> 404 (Not Found) if ID not found or invalid.
+PUT | Update/Replace | 405 (Method not allowed), unless you want to update every resource in the entire collection of resource. | 200 (OK)  or 204 (No Content) <br /> Use 404 (Not Found), if ID not found or invalid.
+PATCH | Partial Update/Modify | 405 (Method not allowed), unless you want to modify the collection itself. | 200 (OK) or 204 (No Content). Use 404 (Not Found), if ID not found or invalid.
+DELETE | Delete | 405 (Method not allowed), 405 (Method not allowed), unless you want to delete the whole collection — use with caution. | 200 (OK) <br /> 404 (Not Found), if ID not found or invalid.
+
+### HTTP Status Code
+- 1xx: Informational – Communicates transfer protocol-level information.
+- 2xx: Success – Indicates that the client’s request was accepted successfully.
+ - 3xx: Redirection – Indicates that the client must take some additional action in order to complete their request.
+- 4xx: Client Error – This category of error status codes points the finger at clients.
+- 5xx: Server Error – The server takes responsibility for these error status codes.
+
+> 406 is returned by the server when it can't respond based on accepting the request headers (ie they have an Accept header which states they only want XML).
+
+> 415 is returned by the server when the entity sent in a request (content in a POST or PUT) has an unsupported mediatype (i.e. they sent XML).
+
+> 406 when you can't send what they want, 415 when they send what you don't want.
+
 ## 📘 Javascript
 ### Closures
 > Closure là một chức năng có quyền truy cập vào phạm vi cha, ngay cả sau khi scope đã đóng.
