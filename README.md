@@ -116,6 +116,10 @@ DELETE | Delete | 405 (Method not allowed), 405 (Method not allowed), unless you
 [Read more](https://www.ibm.com/docs/en/stea/10.0?topic=apis-error-handling-rest)
 
 ### Authentication vs Authorization
+
+> `Authentication` confirms that users are who they say they are.<br />
+`Authorization` gives those users permission to access a resource
+
 [Read more](https://blog.restcase.com/4-most-used-rest-api-authentication-methods/)
 ## 📘 Javascript
 ### Closures
