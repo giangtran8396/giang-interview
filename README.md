@@ -7,6 +7,9 @@
     - [4. HTTP Accept](#http-accept)
     - [5. HTTP Methods](#http-methods)
     - [6. HTTP Status Code](#http-status-code)
+    - [7. HTTP Accept & HTTP Content-Type](#http-accept-&-http-content-type)
+    - [8. Error Handling](#error-handling)
+    - [9. Authentication vs Authorization](#Authentication-vs-Authorization)
 - [JAVASCRIPT](#-javascript)
     - [1. Closures](#closures)
     - [2. Currying](#currying)
@@ -79,7 +82,7 @@ Accept : text/html, application/xml;q=0.9, */*;q=0.8
 ### HTTP Methods
 
 HTTP METHOD | CRUD | ENTIRE COLLECTION (E.G. /USERS) | SPECIFIC ITEM (E.G. /USERS/123)
---- | --- | --- | --- | 
+--- | --- | --- | --- |
 POST | Create | 201 (Created), ‘Location’ header with link to /users/{id} containing new ID. | Avoid using POST on single resource <br /> 201 (Created) <br /> 200 (OK) <br /> 204 (No Content)
 GET | Read | 200 (OK), list of users. Use pagination, sorting and filtering to navigate big lists. | 200 (OK) <br /> single user. <br /> 404 (Not Found) if ID not found or invalid.
 PUT | Update/Replace | 405 (Method not allowed), unless you want to update every resource in the entire collection of resource. | 200 (OK)  or 204 (No Content) <br /> Use 404 (Not Found), if ID not found or invalid.
@@ -99,6 +102,21 @@ DELETE | Delete | 405 (Method not allowed), 405 (Method not allowed), unless you
 
 > 406 when you can't send what they want, 415 when they send what you don't want.
 
+### HTTP Accept & HTTP Content-Type
+
+> `Accept` indicates what kind of response from the server the client can accept. `Content-type` always is about the content of the current request or response.
+
+> if your request has no payload, you don't use a content-type request header.
+
+[Read more](https://webmasters.stackexchange.com/questions/31212/difference-between-the-accept-and-content-type-http-headers)
+
+[Read more](https://stackoverflow.com/questions/35722586/header-parameters-accept-and-content-type-in-a-rest-context)
+
+### Error Handling
+[Read more](https://www.ibm.com/docs/en/stea/10.0?topic=apis-error-handling-rest)
+
+### Authentication vs Authorization
+[Read more](https://blog.restcase.com/4-most-used-rest-api-authentication-methods/)
 ## 📘 Javascript
 ### Closures
 > Closure là một chức năng có quyền truy cập vào phạm vi cha, ngay cả sau khi scope đã đóng.
@@ -121,12 +139,12 @@ sayHello()
 
 #### ES5
 
-``` 
+```
 var add =   function (a){
     return function(b){
         return function(c){
             return a+b+c;
-         }        
+         }
     }
 }
 console.log(add(2)(3)(4)); //output 9
@@ -151,7 +169,7 @@ add(1)(2) //should return 3
 
 ### Hoisting
 
- > Khi một file javascript compiled bởi browser, nhưng trước khi nó thực sự executed thì Function declaration sẽ được stored in memory và được đẩy lên nhưng chính xác ta vẫn nhìn nó vẫn ở vị trí cũ. Và khi javascript file thực sự run thì browser thực sự đã biết những function đó trước khi đọc code của file javascript. 
+ > Khi một file javascript compiled bởi browser, nhưng trước khi nó thực sự executed thì Function declaration sẽ được stored in memory và được đẩy lên nhưng chính xác ta vẫn nhìn nó vẫn ở vị trí cũ. Và khi javascript file thực sự run thì browser thực sự đã biết những function đó trước khi đọc code của file javascript.
 
 ```
 // Function declaration
@@ -224,7 +242,7 @@ var salary = "1000$";
 - Destructuring Array
   ```
   const date = ['1996', '03', '08']
-  
+
   //original methods
   const year = date[0]
   const month = date[1]
@@ -281,8 +299,8 @@ var salary = "1000$";
   const arr1 = [🐱‍🏍,🐱‍👤]
 
   const mergedArray = [...arr,...arr1]
-  //mergedArray: [🤷‍♂️,👀,🐱‍🚀,🐱‍🏍,🐱‍👤] 
-  ```  
+  //mergedArray: [🤷‍♂️,👀,🐱‍🚀,🐱‍🏍,🐱‍👤]
+  ```
 
 ## 📘 Docker
 - Dockerfile build image -> run conatiner from image
