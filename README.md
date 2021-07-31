@@ -10,6 +10,7 @@
     - [7. HTTP Accept & HTTP Content-Type](#http-accept-&-http-content-type)
     - [8. Error Handling](#error-handling)
     - [9. Authentication vs Authorization](#Authentication-vs-Authorization)
+    - [10. API Gateway](#api-gatewave)
 - [JAVASCRIPT](#-javascript)
     - [1. Closures](#closures)
     - [2. Currying](#currying)
@@ -121,6 +122,12 @@ DELETE | Delete | 405 (Method not allowed), 405 (Method not allowed), unless you
 `Authorization` gives those users permission to access a resource
 
 [Read more](https://blog.restcase.com/4-most-used-rest-api-authentication-methods/)
+
+### API Gateway
+
+> An API gateway is an API management tool that sits between a client and a collection of backend services.
+
+[Read more](https://viblo.asia/p/api-gateway-la-gi-tai-sao-mot-he-thong-microservices-lai-can-api-gateway-Do754pDX5M6)
 ## 📘 Javascript
 ### Closures
 > Closure là một chức năng có quyền truy cập vào phạm vi cha, ngay cả sau khi scope đã đóng.
