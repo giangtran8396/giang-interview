@@ -21,9 +21,9 @@
 - [Docker](#-Docker)
 - [Nginx](#-nginx)
 - [ReactJS](#-reactjs)
-    - [1. Feature of ReactJS](#feature-of-reactjs)
-    - [2. React Dom](#react-dom)
-    - [3. What is JSX?](#what-is-jsx)
+    - [1. Feature of ReactJS](#1-feature-of-reactjs)
+    - [2. React Dom](#2-react-dom)
+    - [3. What is JSX?](#3-what-is-jsx)
 
 ## 📘 REST API
 ### 6 architectural constraints
