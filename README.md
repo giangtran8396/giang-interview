@@ -20,6 +20,10 @@
     - [6. Spread](#spread)
 - [Docker](#-Docker)
 - [Nginx](#-nginx)
+- [ReactJS](#-reactjs)
+    - [1. Feature of ReactJS](#feature-of-reactjs)
+    - [2. React Dom](#react-dom)
+    - [3. What is JSX?](#what-is-jsx)
 
 ## 📘 REST API
 ### 6 architectural constraints
@@ -338,3 +342,38 @@ var salary = "1000$";
 7. support flv and mp4
 
 [Read more](https://wiki.matbao.net/nginx-la-gi-huong-dan-kiem-tra-va-cai-dat-nginx-server/)
+
+## 📘 ReactJS
+
+### 1. Feature of ReactJS
+  - Major feature
+    - It uses the `virtual DOM` instead of the `real DOM`.
+    - It uses `server-side rendering`.
+    - It follows `uni-directional` data flow or data binding.
+  - Major advantages
+    - It increases the application’s performance.
+    - Using JSX, code’s readability increases
+  - Limitations of React?
+    - Its library is very large and takes time to understand
+    - It can be little difficult for the novice programmers to understand
+    - Coding gets complex as it uses inline templating and JSX
+
+### 2. React DOM
+  - Differentiate between Real DOM and Virtual DOM
+    RealDOM | VituralDOM
+    --- | ---
+    It updates slow. | It updates faster
+    Can directly update HTML. |	Can’t directly update HTML
+    Creates a new DOM if element updates.	| Updates the JSX if element updates.
+    DOM manipulation is very expensive | DOM manipulation is very easy
+    Too much of memory wastage. | No memory wastage
+  - What do you understand by Virtual DOM? Explain its working.
+    1. Whenever any underlying data changes, the entire UI is re-rendered in Virtual DOM representation.<br/>
+    ![image info](./assert/img/react-dom1.png)
+    2. Then the difference between the previous DOM representation and the new one is calculated<br/>
+    ![image info](./assert/img/react-dom2.png)
+    3. Once the calculations are done, the real DOM will be updated with only the things that have actually changed.<br/>
+    ![image info](./assert/img/react-dom3.png)
+
+### 3. What is JSX?
+  - JSX is a shorthand for JavaScript XML. This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax. This makes the HTML file really easy to understand.
