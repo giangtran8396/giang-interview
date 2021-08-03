@@ -30,6 +30,10 @@
     - [7. State](#7-state)
     - [8. Statefull and Stateless Component](#8-stateful-and-stateless-component)
     - [9. Lifecycle](#9-lifecycle)
+    - [10. Event](#10-Event)
+    - [11. Refs](#11-refs)
+    - [12. ControlledComponent & UnControlledComponent](#12-controlledcomponent-&-uncontrolledcomponent)
+    - [13. Pure Component](#13-pure-component)
 
 ## 📘 REST API
 ### 6 architectural constraints
@@ -412,3 +416,71 @@ var salary = "1000$";
   impure | pure
 
 ### 9. Lifecycle
+  - 3 stages of React
+    - Mounting: When component created and render to DOM
+    - Updating: component updating when `props` or `state` change
+    - Unmounting: when component destroy
+
+  > `Hooks` are a new addition in React 16.8. They let you use state and other React features without writing a class.
+
+  - ComponentDidMount: only called once after component rendered <br/>
+    eg: fetch data, add event listener
+
+    - with `Hooks`
+    ```
+    useEffect(() => {
+      // fetch data
+    },[]); // with empty array
+    ```
+  - ComponentDidUpdate: happens when props or state change and component render
+
+    - with `Hooks`
+    ```
+    useEffect(() => {
+      // handle when data change
+    },[param]);
+    ```
+  - ComponentWillUnMount: called before component destroyed
+    - with `Hooks`
+    ```
+    useEffect(() => {
+      return () => {
+        //unsubscribe Event
+      }
+    },[]);
+
+  - ShouldComponentUpdate: using when you want component render or not by return `true` or `false`
+
+  - getDerivedStateFromProps & getSnapshotBeforeUpdate
+    - It not used often
+
+  > Flow when state or props change <br/>
+      1. getDerivedStateFromProps<br/>
+      2. shouldComponentUpdate<br/>
+      3. componentWillUpdate<br/>
+      4. Render<br/>
+      5. ComponentDidUpdate<br/>
+
+### 10. Event
+  - events are the triggered reactions to specific actions like mouse hover, mouse click, key press, etc
+    > Events are named using camel case instead of just using the lowercase. <br/>
+      Events are passed as functions instead of strings.
+    ```
+    <button onClick={eventClickHanlder}></button>
+    ```
+
+### 11. Refs
+  - store references to a particular React element or component returned by render
+  - eg: control focus, Integrate with third party, Select text
+
+### 12. ControlledComponent & UnControlledComponent
+  Controlled Components | Uncontrolled Components
+  --- | ---
+  Data is controlled by the parent component | Data is controlled by the DOM
+  They take in the current values through props and then notify the changes via callbacks | Refs are used to get their current values
+
+### 13. Pure Component
+  - reduce render unnecessary and improve performace but it can happens errors if handle not well
+  - Pure Component using `shallow equality` about `props` and `state` before decide render or not
+
+  [Read More](#https://viblo.asia/q/component-vs-purecomponent-MnKMv99EZ7P)
