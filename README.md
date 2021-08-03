@@ -24,6 +24,12 @@
     - [1. Feature of ReactJS](#1-feature-of-reactjs)
     - [2. React Dom](#2-react-dom)
     - [3. What is JSX?](#3-what-is-jsx)
+    - [4. In React, everything is a component](#4-In-React,-everything-is-a-component)
+    - [5. Render](#5-render)
+    - [6. Props](#6-props)
+    - [7. State](#7-state)
+    - [8. Statefull and Stateless Component](#8-stateful-and-stateless-component)
+    - [9. Lifecycle](#9-lifecycle)
 
 ## 📘 REST API
 ### 6 architectural constraints
@@ -377,3 +383,32 @@ var salary = "1000$";
 
 ### 3. What is JSX?
   - JSX is a shorthand for JavaScript XML. This is a type of file used by React which utilizes the expressiveness of JavaScript along with HTML like template syntax. This makes the HTML file really easy to understand.
+
+### 4. In React, everything is a component
+  - ReactJS building based on component Reusable. These components split up the UI to small component and reusable. Then it `render` each component independent of each with out effecting the rest ui.
+
+### 5. Render
+  - Each React component must have `render()`
+  - `render()` will return sigle element repersent on DOM
+  - if more than one HTML elemnt you should grouped by closeing tag such as `<div>`, `<form>`, etc...
+  - This must be kept `pure` return same value each time it invoked
+
+### 6. Props
+  - `Props` is `properties` of React
+  - `Props` using passing value from parent to child
+  - A child component can send back `props` to parent
+  - `Props` is a `readonly` and cann't change `inside` component
+
+### 7. State
+  - `state` using inside component and can change value
+  - Whatever `state` change component will re-render
+  - Parent component cann't change `state` in child component
+
+### 8. Statefull and Stateless Component
+  Stateful Component | Stateless Component
+  --- | ---
+  Have authority to change state | Do not have the authority to change state
+  Stores info about component’s state change in memory | Calculates the internal state of the components
+  impure | pure
+
+### 9. Lifecycle
