@@ -489,7 +489,7 @@ var salary = "1000$";
   - reduce render unnecessary and improve performace but it can happens errors if handle not well
   - Pure Component using `shallow equality` about `props` and `state` before decide render or not
 
-  [Read More](#https://viblo.asia/q/component-vs-purecomponent-MnKMv99EZ7P)
+  [Read More](https://viblo.asia/q/component-vs-purecomponent-MnKMv99EZ7P)
 
 ### 14. Key List
   - `Keys` helps react identify which item changed, added, removed
