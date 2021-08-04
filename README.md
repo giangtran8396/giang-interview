@@ -34,6 +34,12 @@
     - [11. Refs](#11-refs)
     - [12. ControlledComponent & UnControlledComponent](#12-controlledcomponent-&-uncontrolledcomponent)
     - [13. Pure Component](#13-pure-component)
+    - [14. Key List](#14-key-list)
+- [Redux](#-redux)
+    - [1. Principles](#1-principles)
+    - [2. Component of Redux](#2-component-of-redux)
+    - [3. Action](#3-action)
+    - [4. Reducer](#4-reducer)
 
 ## 📘 REST API
 ### 6 architectural constraints
@@ -484,3 +490,31 @@ var salary = "1000$";
   - Pure Component using `shallow equality` about `props` and `state` before decide render or not
 
   [Read More](#https://viblo.asia/q/component-vs-purecomponent-MnKMv99EZ7P)
+
+### 14. Key List
+  - `Keys` helps react identify which item changed, added, removed
+  - `Keys` should be stable identify in list or array
+  - Can using ID of list element as `keys`
+
+## 📘 REST API
+
+### 1. Principles
+  - `Single source of truth`: the state of entrie application is stored in object/state tree. It's help control state synchonously. Single state tree also make easier to debug and inspect application
+  - `State is read-only`: The only way change state to emit action. An action is a plain object describing the change.
+  - `Changes are made with pure functions`: To Specifed how the state tree is transformed. using reducer. Reducer is pure function and receive `prevState` and an `action` and return `nextState`.
+
+### 2. Component of Redux
+  - `Action`: Object describing what happens
+  - `Reducer`: It is a place to determine how the state will change
+  - `Store`: State/ Object tree of the entire application is saved in the Store.
+  - `View`: Simply displays the data provided by the Store
+
+### 3. Action
+  - An `action` must have property `type` that indicates the type of ACTION being performed.
+  - `type` is a string contranst
+
+### 4. Reducer
+  - `Reducer` is pure function specified how to application's state change.
+  - `Reducer` happens when `action` have been dispatch and base on `type` property update state and return `new state`
+  - `Reducer` will return previous state if no work needs to be done.
+  
