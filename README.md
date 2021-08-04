@@ -496,7 +496,7 @@ var salary = "1000$";
   - `Keys` should be stable identify in list or array
   - Can using ID of list element as `keys`
 
-## 📘 REST API
+## 📘 Redux
 
 ### 1. Principles
   - `Single source of truth`: the state of entrie application is stored in object/state tree. It's help control state synchonously. Single state tree also make easier to debug and inspect application
