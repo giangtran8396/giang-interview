@@ -406,7 +406,7 @@ var salary = "1000$";
 ### 6. Props
   - `Props` is `properties` of React
   - `Props` using passing value from parent to child
-  - A child component can send back `props` to parent
+  - A child component cann't send back `props` to parent
   - `Props` is a `readonly` and cann't change `inside` component
 
 ### 7. State
