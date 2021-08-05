@@ -35,6 +35,7 @@
     - [12. ControlledComponent & UnControlledComponent](#12-controlledcomponent-&-uncontrolledcomponent)
     - [13. Pure Component](#13-pure-component)
     - [14. Key List](#14-key-list)
+    - [15. Testing](#15-testing)
 - [Redux](#-redux)
     - [1. Principles](#1-principles)
     - [2. Component of Redux](#2-component-of-redux)
@@ -495,6 +496,11 @@ var salary = "1000$";
   - `Keys` helps react identify which item changed, added, removed
   - `Keys` should be stable identify in list or array
   - Can using ID of list element as `keys`
+
+### 15. Testing
+  - Jest
+  - @testing-library/react-hooks
+  - Sinon, chai
 
 ## 📘 Redux
 
