@@ -286,7 +286,7 @@ var salary = "1000$";
   ```
 ### Rest Parameters
 
-> using when unspecifed parametr
+> using when unspecifed parameter
 
 - Rest
   ```
