@@ -37,6 +37,7 @@
     - [14. High-Order Component](#14-high-order-component)
     - [15. Key List](#14-key-list)
     - [16. Testing](#15-testing)
+    - [17. Prop Drilling](#16-drop-drilling)
 - [Redux](#-redux)
     - [1. Principles](#1-principles)
     - [2. Component of Redux](#2-component-of-redux)
@@ -286,7 +287,7 @@ var salary = "1000$";
   ```
 ### Rest Parameters
 
-> using when unspecifed parametr
+> using when unspecifed parameter
 
 - Rest
   ```
@@ -509,6 +510,10 @@ var salary = "1000$";
   - @testing-library/react-hooks
   - Sinon, chai
 
+### 17. Prop Drilling
+  - `Prop drilling` occurs when you want passing `prop` from parent component to low level component and that component no need using this `prop`
+    - eg: propsX AComponent -> BComponent -> CComponent
+  - Using react Context API to managed state
 ## 📘 Redux
 
 ### 1. Principles
@@ -530,4 +535,3 @@ var salary = "1000$";
   - `Reducer` is pure function specified how to application's state change.
   - `Reducer` happens when `action` have been dispatch and base on `type` property update state and return `new state`
   - `Reducer` will return previous state if no work needs to be done.
-  
