@@ -34,8 +34,9 @@
     - [11. Refs](#11-refs)
     - [12. ControlledComponent & UnControlledComponent](#12-controlledcomponent-&-uncontrolledcomponent)
     - [13. Pure Component](#13-pure-component)
-    - [14. Key List](#14-key-list)
-    - [15. Testing](#15-testing)
+    - [14. High-Order Component](#14-high-order-component)
+    - [15. Key List](#14-key-list)
+    - [16. Testing](#15-testing)
 - [Redux](#-redux)
     - [1. Principles](#1-principles)
     - [2. Component of Redux](#2-component-of-redux)
@@ -492,12 +493,18 @@ var salary = "1000$";
 
   [Read More](https://viblo.asia/q/component-vs-purecomponent-MnKMv99EZ7P)
 
-### 14. Key List
+### 14. High-Order Component
+  - HOC is a component wrapped another component
+    1. HOC used for Code reuse, logic and bootstrap abstraction
+    2. Render High jacking
+    3. State abstraction and manipulation
+    4. Props manipulation
+### 15. Key List
   - `Keys` helps react identify which item changed, added, removed
   - `Keys` should be stable identify in list or array
   - Can using ID of list element as `keys`
 
-### 15. Testing
+### 16. Testing
   - Jest
   - @testing-library/react-hooks
   - Sinon, chai
