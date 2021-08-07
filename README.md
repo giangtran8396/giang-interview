@@ -43,6 +43,7 @@
     - [2. Component of Redux](#2-component-of-redux)
     - [3. Action](#3-action)
     - [4. Reducer](#4-reducer)
+- [More question](#-more-question)
 
 ## 📘 REST API
 ### 6 architectural constraints
@@ -535,3 +536,6 @@ var salary = "1000$";
   - `Reducer` is pure function specified how to application's state change.
   - `Reducer` happens when `action` have been dispatch and base on `type` property update state and return `new state`
   - `Reducer` will return previous state if no work needs to be done.
+
+## 📘 More question
+- [Read more](#https://www.fullstack.cafe/blog/react-js-interview-questions)
