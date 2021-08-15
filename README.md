@@ -538,4 +538,4 @@ var salary = "1000$";
   - `Reducer` will return previous state if no work needs to be done.
 
 ## 📘 More question
-- [Read more](#https://www.fullstack.cafe/blog/react-js-interview-questions)
+- [Read more](https://www.fullstack.cafe/blog/react-js-interview-questions)
